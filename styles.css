@@ -1,0 +1,15 @@
+.gallery {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    flex-basis: calc((100 - 30px) / 3);
+}
+li {
+    width: 320px;
+    height: 220px;
+    margin-right: 15px;
+}
+img {
+    width: 100%;
+    height: 100%;
+}
