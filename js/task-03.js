@@ -12,3 +12,17 @@ const images = [
         alt: 'Group of Horses Running',
     },
 ];
+
+const galleryEl = document.querySelector(`#gallery`)
+
+const makeGalleryImages = element => {
+    const arrImages = []
+    const imagesOfGallery = element.forEach(el => {
+        const createLi = document.createElement(`li`)
+        createLi.insertAdjacentHTML(`afterbegin`, `<img src =${el.url} alt = ${el.alt} width = 320>`)
+        arrImages.push(createLi)
+    })
+    galleryEl.append(...arrImages)
+}
+makeGalleryImages(images)
+console.log(galleryEl);
