@@ -4,8 +4,5 @@ const refs = {
 }
 
 refs.input.addEventListener(`input`, (event) => {
-    refs.userName.textContent = 'незнакомец'
-    if (event.currentTarget.value !== '') {
-        refs.userName.textContent = event.currentTarget.value
-    }
+    event.currentTarget.value === '' ? refs.userName.textContent = 'незнакомец' : refs.userName.textContent = event.currentTarget.value
 })
