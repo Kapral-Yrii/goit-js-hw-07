@@ -4,5 +4,5 @@ const refs = {
 }
 
 refs.input.addEventListener(`input`, (event) => {
-    event.currentTarget.value === '' ? refs.userName.textContent = 'незнакомец' : refs.userName.textContent = event.currentTarget.value
+    event.currentTarget.value.trim() === '' ? refs.userName.textContent = 'незнакомец' : refs.userName.textContent = event.currentTarget.value
 })
